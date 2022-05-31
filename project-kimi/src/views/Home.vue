@@ -1,18 +1,43 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+   <div class="dashboard-box">
+    <ProgressDashboard
+                :green="orderG"
+                :yellow="orderY"
+                :red="orderR"
+              />
+   </div>
+   <div>测试</div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-
+import { defineComponent } from "vue";
+import ProgressDashboard from "../components/ProgressDashboard.vue";
 export default defineComponent({
-  name: 'Home',
   components: {
-    HelloWorld,
+    ProgressDashboard,
+  },
+  computed: {},
+  methods: {},
+  data() {
+    return {
+      orderG: 1,
+      orderY: 1,
+      orderR: 8,
+    };
   },
 });
 </script>
+<style lang="scss" scoped>
+.home {
+  width: 100%;
+}
+.dashboard-box {
+  border: 2px solid #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+</style>
