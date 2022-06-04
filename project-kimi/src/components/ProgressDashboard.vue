@@ -30,18 +30,11 @@ export default defineComponent({
     const redAngle: any = ref(-90);
     const yellowAngle: any = ref(-90);
     const greenAngle: any = ref(-90);
+    const total: number = props.yellow + props.green + props.red ;
     if (!(props.red == 0 && props.yellow == 0 && props.green == 0)) {
-      redAngle.value =
-        -90 +
-        ((props.yellow + props.green + props.red) * 180) /
-          (props.yellow + props.green + props.red);
-
-      yellowAngle.value =
-        -90 +
-        ((props.yellow + props.green) * 180) /
-          (props.yellow + props.green + props.red);
-      greenAngle.value =
-        -90 + (props.green * 180) / (props.yellow + props.green + props.red);
+      redAngle.value = -90 + ((total) * 180) / (total);
+      yellowAngle.value = -90 +  ((props.yellow + props.green) * 180) /  (total);
+      greenAngle.value = -90 + (props.green * 180) / (total);
     }
     redAngle.value = redAngle.value + "deg";
     yellowAngle.value = yellowAngle.value + "deg";
