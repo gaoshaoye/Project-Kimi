@@ -9,10 +9,11 @@
       <div class="progress-orders-num">
         {{ $props.yellow + $props.red }}
       </div>
+      <div class="progress-orders-text">
+        订单
+      </div>
     </div>
-    <div class="progress-orders-text">
-      订单
-    </div>
+    
   </div>
 </template>
 
@@ -51,6 +52,8 @@ export default defineComponent({
   height: 90px;
   width: 180px;
   overflow: hidden;
+  // padding: 8px;
+  
 }
 .content {
   overflow: hidden;
@@ -59,6 +62,7 @@ export default defineComponent({
   position: absolute;
   z-index: 999;
   clip: rect(0px, 180px, 90px, 0px);
+  position: relative;
 }
 .dashboard {
   height: 180px;
@@ -98,6 +102,7 @@ export default defineComponent({
 .progress-orders-num {
   position: absolute;
   height: 33px;
+  width: 40px;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -105,18 +110,23 @@ export default defineComponent({
   letter-spacing: 1px;
   color: #333333;
   margin-top: 52px;
-  margin-left: 75.65px;
+  left: calc(50% - 20px);
+  // margin-left: 75.65px;
+  // margin-left: auto;
+  // margin-right: auto;
 }
 .progress-orders-text {
   position: absolute;
   height: 16px;
+  width: 40px;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: #333333;
   margin-top: 84px;
-  margin-left: 60px;
+  left: calc(50% - 20px);
+  // margin-left: 60px;
   z-index: 9999;
 }
 </style>
