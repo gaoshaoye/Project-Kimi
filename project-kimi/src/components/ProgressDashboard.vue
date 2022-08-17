@@ -98,6 +98,7 @@ export default defineComponent({
 .progress-orders-num {
   position: absolute;
   height: 33px;
+  width: 100%;
   font-style: normal;
   font-weight: 500;
   font-size: 24px;
@@ -105,18 +106,21 @@ export default defineComponent({
   letter-spacing: 1px;
   color: #333333;
   margin-top: 52px;
-  margin-left: 75.65px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .progress-orders-text {
   position: absolute;
   height: 16px;
+  width: 180px;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: #333333;
   margin-top: 84px;
-  margin-left: 60px;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 9999;
 }
 </style>
