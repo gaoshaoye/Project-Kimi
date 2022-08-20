@@ -10,8 +10,8 @@
         {{ $props.yellow + $props.red }}
       </div>
     </div>
-    <div class="progress-orders-text">
-      订单
+    <div v-if="text !== '' " class="progress-orders-text">
+      {{ $props.text }}
     </div>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default defineComponent({
   components: {},
   computed: {},
   methods: {},
-  props: ["green", "yellow", "red"],
+  props: ["green", "yellow", "red" ,"text"],
   setup(props, context) {
     const redAngle: any = ref(-90);
     const yellowAngle: any = ref(-90);
@@ -51,6 +51,7 @@ export default defineComponent({
   height: 90px;
   width: 180px;
   overflow: hidden;
+  padding-bottom: 8px;
 }
 .content {
   overflow: hidden;
