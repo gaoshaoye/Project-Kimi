@@ -1,2 +1,2 @@
-# Project-Kimi
-A dashboard style task progress bar in Vue3
+## Project-Kimi
+A dashboard style Order Progress Indicator using Vue3
