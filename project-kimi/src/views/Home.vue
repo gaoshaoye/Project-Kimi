@@ -171,5 +171,6 @@ export default defineComponent({
   width: 130px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 8px;
 }
 </style>
